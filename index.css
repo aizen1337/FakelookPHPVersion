@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(0,0,0,0.8);
+}
+.content {
+    display: flex;
+    width: 100%;
+    height: max-content;
+}
+.chatbox {
+    margin-top: 6em;
+    height: 10vh;
+    width: 30%;
+    background-color: rgba(0,0,0,0.2);
+}
+.activeUsers {
+    margin: 0;
+    display: flex;
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px;
+    overflow-x: scroll;
+}
+.chat {
+        background-color: rgba(0,0,0,0.3);
+        display: block;
+        text-align: center;
+        overflow-y: scroll;
+        height: 75vh;
+        width: 100%;
+        padding: 20px;
+}
+.chat::-webkit-scrollbar, .posts::-webkit-scrollbar, .offcanvas-body::-webkit-scrollbar{
+    width: 1em
+}
+.chat::-webkit-scrollbar-track, .posts::-webkit-scrollbar-track, .offcanvas-body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(255,255,255,0.1);
+  }
+.chat::-webkit-scrollbar-thumb, .posts::-webkit-scrollbar-thumb, .offcanvas-body:-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.8);
+    outline: 1px solid rgba(0,0,0,0.1);
+    border-radius: 30px;
+  }
+.messageRow {
+    display: flex;
+    width: 100%;
+  }
+.sentMessage {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-wrap: break-word;
+        width: 70%;
+        height: max-content;
+        background-color: crimson;
+        border-radius: 20px;
+        padding: 20px;
+        color:white;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+        float: right;
+        margin: 1em;
+        word-wrap: break-word;
+}
+.receivedMessage {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    width: 70%;
+    height:  max-content;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 20px;
+    color: black;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    float: left;
+    margin: 1em;
+    word-wrap: break-word;
+}
+.sentMessage p, .receivedMessage p {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin-right: 1em;
+    margin: 1em;
+}
+.messageBox {
+    height: 2em;
+    width:80%;
+    border-radius: 20px;
+}
+.messageButton{
+    width:15%;
+    background-color: crimson;
+    height: 2em;
+    border: none;
+    margin: 0;
+    border-radius: 10px;
+}
+.posts {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: scroll;
+}
+.post-image {
+    width: 80%;
+    border-radius: 20px;
+}
+.flex-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 7rem;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+}
+.left, .right {
+width: 50%;
+height: 80vh;
+}
+.card {
+    width: 100%;
+    padding: 1em;
+}
+.card-img-bottom {
+    height: 400px;
+    padding: 1em;
+}
+.card-footer {
+    display: flex;
+    padding: 1em;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon {
+    margin: 1em;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #6c757d;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    border: none;
+}
+.icon:link, .icon:visited {
+    color: white;
+}
+.link, a .link {
+    cursor: pointer;
+    text-decoration: none;
+    color: yellowgreen;
+}
+.delete {
+    background-color: crimson;
+}
+.edit {
+    background-color: blueviolet;
+}
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.small-avatar {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin: 1em;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.chat-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.useractive {
+    display: flex;
+    color: limegreen;
+    font-size: 1em;
+    padding: 1em;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.userinactive {
+    display: flex;
+    color: crimson;
+    font-size: 1em;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+.item {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.activeUser  {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.likes, .likes:visited, .likes:link, .likes:hover {
+    display: flex;
+    text-decoration: none;
+    font-size: 2em;
+    color: crimson;
+    cursor: pointer;
+    padding: 3em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.likes p {
+    margin: 1em;
+}
+.form {
+    display: flex;
+}
+.searchbar {
+    height: 100px;
+    width: 50vw;
+    border-radius: 20px;
+    font-size: 2em;
+    text-align: center;
+    padding: 1em
+}
+.searchbutton {
+    padding: 1em;
+    height: 100px;
+    width: 10vw;
+    border-radius: 20px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: crimson;
+    color:white;
+}
+@media (max-width: 1024px) {
+    .posts {
+        width: 100%;
+    }
+    .chat, .chatbox, .activeUsers {
+        display: none;
+    }
+}
+
